@@ -1,0 +1,13 @@
+{
+  "name": "shared",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Jarek Jegorow <jareks@me.com>",
+  "private": true,
+	"license": "UNLICENSED",
+	"main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}

@@ -1,0 +1,24 @@
+:host {
+  --input-padding-right: 2.5rem;
+  --input-padding-left: 0.625rem;
+
+  --help-text-font-size: 0.875rem;
+
+  display: block;
+  height: 21px;
+  padding-left: var(--input-padding-left);
+  font-size: var(--help-text-font-size);
+  color: var(--form-color-hover);
+}
+
+:host(.error) {
+  color: var(--form-color-error);
+}
+
+::slotted(span) {
+  display: none;
+}
+
+::slotted(span.visible) {
+  display: block;
+}

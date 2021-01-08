@@ -1,0 +1,104 @@
+:host {
+  display: block;
+}
+:host {
+  display: inline-block;
+
+  width: 1em;
+  height: 1em;
+
+  contain: strict;
+
+  fill: currentColor;
+
+  box-sizing: content-box !important;
+}
+
+:host .ionicon {
+  stroke: currentColor;
+}
+
+.ionicon-fill-none {
+  fill: none;
+}
+
+.ionicon-stroke-width {
+  stroke-width: 32px;
+  stroke-width: var(--ionicon-stroke-width, 32px);
+}
+
+.icon-inner,
+.ionicon,
+svg {
+  display: block;
+
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Icon RTL
+ * -----------------------------------------------------------
+ */
+
+:host(.flip-rtl) .icon-inner {
+  transform: scaleX(-1);
+}
+
+
+/* Icon Sizes
+ * -----------------------------------------------------------
+ */
+
+:host(.icon-small) {
+  font-size: 18px !important;
+}
+
+:host(.icon-large){
+  font-size: 28px !important;
+}
+
+
+/* Icon Colors
+ * -----------------------------------------------------------
+ */
+
+:host(.color) {
+  color: var(--color-base) !important;
+}
+
+:host(.color-primary) {
+  --color-base: var(--color-primary, #3880ff);
+}
+
+:host(.color-secondary) {
+  --color-base: var(--color-secondary, #0cd1e8);
+}
+
+:host(.color-tertiary) {
+  --color-base: var(--color-tertiary, #f4a942);
+}
+
+:host(.color-success) {
+  --color-base: var(--color-success, #10dc60);
+}
+
+:host(.color-warning) {
+  --color-base: var(--color-warning, #ffce00);
+}
+
+:host(.color-danger) {
+  --color-base: var(--color-danger, #f14141);
+}
+
+:host(.color-light) {
+  --color-base: var(--color-light, #f4f5f8);
+}
+
+:host(.color-medium) {
+  --color-base: var(--color-medium, #989aa2);
+}
+
+:host(.color-dark) {
+  --color-base: var(--color-dark, #222428);
+}

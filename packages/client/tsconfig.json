@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2020"
+    ],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [{ "path": "../shared" }]
+}

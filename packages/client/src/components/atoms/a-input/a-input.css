@@ -1,0 +1,120 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+}
+
+:host *,
+:host *:before,
+:host *:after {
+  box-sizing: inherit;
+}
+
+.field {
+  position: relative;
+}
+
+/* ---- Input --------------------------------------------------------------- */
+input {
+  display: inline-block;
+  width: 100%;
+  padding: var(--input-padding-top) var(--su-4) var(--input-padding-bottom) var(--su-4);
+  margin: 0;
+  background-color: var(--form-bg);
+  border: var(--border-width) solid var(--form-border);
+  border-radius: var(--radius);
+  color: var(--body-color);
+  font-family: inherit;
+  font-size: var(--fs-l);
+  line-height: var(--lh-base);
+  touch-action: manipulation;
+  appearance: none;
+  transition: all var(--transition-props);
+}
+
+input:focus {
+  background-color: var(--form-bg-focus);
+  border-color: var(--form-border-focus);
+  box-shadow: 0 0 0 1px var(--form-border-focus);
+}
+
+input[type="password"] {
+  padding-right: var(--input-padding-right-visibility);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill::first-line {
+  font-size: var(--input-font-size);
+  font-weight: 400;
+}
+
+input:active:not(:disabled),
+input:focus:not(:disabled) {
+  outline: none;
+}
+
+.input__control--outline {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--input-outline-color);
+  box-shadow: 0 0 0 4px var(--input-outline-shadow);
+}
+
+.input__control--error {
+  background-color: var(--form-bg-focus);
+  border-color: var(--form-border-error);
+  box-shadow: 0 0 0 1px var(--form-border-error);
+}
+
+.input__control--success {
+  background-color: var(--form-bg-focus);
+  border-color: var(--form-border-success);
+  box-shadow: 0 0 0 1px var(--form-border-success);
+}
+
+input:disabled {
+  background-color: var(--background-disabled);
+  color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.validity-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* height: calc(100% - 2 * var(--border-width)); */
+}
+
+button.validity-icon {
+  padding: var(--input-padding-top) var(--su-2) var(--input-padding-bottom) var(--su-2);
+  margin: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: var(--fs-l);
+  line-height: var(--lh-base);
+  -webkit-user-select: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.validity-icon c-icon {
+  top: var(--input-padding-top);
+}
+
+.validity-icon * {
+  pointer-events: none;
+}
+
+/* ---- Media Query --------------------------------------------------------- */
+@media (min-width: 768px) {
+  :host {
+  }
+}
+
+@keyframes onAutoFillStart { from { content: ''} to {content: ''}}
+@keyframes onAutoFillCancel { from {content: ''} to {content: ''}}

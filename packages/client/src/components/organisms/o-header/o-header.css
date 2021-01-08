@@ -1,0 +1,118 @@
+:host {
+  position: fixed;
+  top: 0;
+  right:0;
+  left: 0;
+  display: block;
+  width: 100%;
+  background-color: var(--header-bg);
+  box-shadow: 0 1px 1px var(--header-shadow);
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+:host * {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  order: -1;
+  width: var(--layout);
+  max-width: var(--site-width);
+  height: var(--header-height);
+  padding: 8px var(--layout-padding) 8px var(--su-2);
+  margin: 0 auto;
+}
+
+.link-logo {
+  display: inline-flex;
+  align-self: stretch;
+  align-items: center;
+  vertical-align: middle;
+  max-width: var(--max-width, 125px);
+  margin: 0 var(--header-gap) 0 0;
+  color: var(--base-100);
+  font-size: var(--font-size, var(--fs-base));
+  font-weight: var(--font-weight, var(--fw-medium));
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  line-height: var(--lh-tight);
+  overflow-wrap: anywhere;
+}
+
+app-search {
+  margin: 0 var(--header-gap) 0 0;
+}
+
+.nav-tools {
+  grid-area: nav-tools;
+  display: flex;
+  margin: 0 var(--header-gap) 0 auto;
+}
+
+.nav-tools--hidden {
+  display: none;
+}
+
+.nav-tools > * {
+  margin: 0 var(--header-nav-gap) 0 0;
+}
+
+.link-icon {
+ color: var(--header-icons-color);
+}
+
+.link-icon:hover {
+  color: var(--header-icons-color-hover);
+}
+
+.link-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 0 0 auto;
+  color: var(--base-100);
+  font-size: var(--fs-s);
+  text-decoration: none;
+}
+
+.link-offer b {
+  color: var(--accent-brand);
+  font-size: var(--fs-base);
+}
+
+.link-offer span + span {
+  font-size: var(--fs-base);
+}
+
+.link-offer:hover b {
+  color: var(--accent-brand-darker);
+}
+
+@media (min-width: 640px) {
+  .link-logo {
+    --max-width: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-left: var(--layout-padding);
+  }
+
+  .link-logo {
+    --max-width: 175px;
+    --font-size: var(--fs-l);
+    --font-weight: var(--fw-bold);
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .link-logo {
+    --max-width: 200px;
+    --font-size: var(--fs-xl);
+  }
+}

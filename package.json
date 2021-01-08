@@ -1,0 +1,17 @@
+{
+  "name": "app-starter",
+	"version": "1.0.0",
+  "author": "Jarek Jegorow <jareks@me.com>",
+  "license": "UNLICENSED",
+	"private": true,
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "scripts": {
+		"build": "yarn workspaces run build",
+		"client": "yarn workspace client",
+		"server": "yarn workspace server",
+		"components": "yarn workspace components",
+    "shared": "yarn workspace shared tsc"
+  }
+}

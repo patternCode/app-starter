@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(2 * var(--layout-gap));
+}
+
+div {
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  color: var(--card-color);
+  box-shadow: 0 0 0 1px var(--card-border);
+  overflow-wrap: anywhere;
+}

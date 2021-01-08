@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+}
+
+:host *,
+:host *:before,
+:host *:after {
+  box-sizing: inherit;
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+/* ---- Label --------------------------------------------------------------- */
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--fs-l);
+  line-height: var(--lh-base);
+  color: var(--label-color);
+  transform:
+    translate3d(var(--su-4), calc(1.25em - var(--border-width)), 0px)
+    scale(1, 1);
+  transform-origin: top left;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+}
+
+label.label--relative {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: var( --label-color-active);
+  transform: none;
+}
+
+label.label--focus,
+label.label--filled,
+label.label--invalid,
+label.label--placeholder,
+input:-webkit-autofill ~ .label {
+  transform:
+    translate3d(var(--su-4), calc(0.25em - var(--border-width)), 0px)
+    scale(0.65, 0.65);
+}
+
+label.label--focus,
+label.label--filled,
+label.label--placeholder,
+input:-webkit-autofill ~ .label {
+  color: var(--label-color-active);
+}
+
+label.label--invalid {
+  color: var(--form-color-error);
+}
+
+input:disabled ~ label,
+textarea:disabled ~ label {
+  color: var(--label-color-disabled);
+}
+
+label slot,
+label span {
+  display: inline-block;
+}
+
+/* ---- Media Query --------------------------------------------------------- */
+@media (min-width: 768px) {
+  :host {
+  }
+}

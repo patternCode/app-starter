@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.response {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 0px;
+  opacity: 0;
+}
+
+.response--open {
+  height: auto;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: var(--radius);
+  opacity: 1;
+}
+
+.response--success {
+  padding: var(--su-8) var(--su-8);
+  background-color: var(--accent-success-a10);
+}
+
+.response--error {
+  padding: var(--su-6) var(--su-8);
+  border-color: var(--accent-danger);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--accent-danger);
+  color: var(--base-inverted);
+  font-weight: bold;
+}
+
+.response__icon {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+/* .response__icon ::slotted(*) {
+  margin-left: var(--su-4);
+} */
+
+.response__message ::slotted(span) {
+  display: none;
+}
+
+.response__message ::slotted(.visible) {
+  display: block;
+}
